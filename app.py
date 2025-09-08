@@ -55,7 +55,7 @@ def get_response(hotel_text, chat_history, model_id="llama-3.1-8b-instant"):
 # -------------------------------
 # Streamlit app setup
 # -------------------------------
-st.set_page_config(page_title="Hotel Info Chatbot", page_icon="🏨", layout="wide")
+st.set_page_config(page_title="HotelBot", page_icon="🏨", layout="wide")
 
 st.markdown("""
 <style>
@@ -109,8 +109,10 @@ body {
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🏨 Hotel Info Chatbot")
-st.caption("Enter the URL of a hotel website, then ask anything about it!")
+st.title("🏨  Chatbot")
+st.caption("Currently I have details of 1 hotel, So please use the default URL.")
+st.caption("You can ask me anything about the Shri Raghavendra Hotel!")
+age = st.slider("Select your age:", 0, 100, 25)
 
 # URL input
 hotel_url = st.text_input("Enter Hotel URL:", value="https://sriraghavendrahotel.com/")
